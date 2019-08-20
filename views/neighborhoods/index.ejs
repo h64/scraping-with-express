@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>All Neighborhoods</h1>
+        <ul>
+            <li>
+                <a href="/neighborhoods">Neighborhoods Page</a>
+            </li>
+            <li>
+                <a href="/api/neighborhoods">Neighborhoods API</a>
+            </li>
+        </ul>
+
+        <% hoods.forEach(neighborhood => {  %>
+            <div>
+                <h2><%= neighborhood.name %></h2>
+                <a href="<%= neighborhood.link %>">Link to visitseattle.org!</a>
+                <p><%= neighborhood.description %></p>
+                <img src="<%= neighborhood.photo %>"></img>
+            </div>
+        <% }) %>
+    </body>
+</html>
